@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  path: ..
+  git_url: https://github.com/csdms/model_metadata
 
 requirements:
   build:
