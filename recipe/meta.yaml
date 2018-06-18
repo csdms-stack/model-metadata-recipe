@@ -1,5 +1,5 @@
 {% set name = "model_metadata" %}
-{% set version = "0.2" %}
+{% set version = "0.3" %}
 
 
 package:
@@ -17,14 +17,16 @@ requirements:
     - packaging
     - pyyaml
     - six
+    - jinja2
     - scripting
 
   run:
     - python
     - packaging
     - numpy
-    - six
     - pyyaml
+    - six
+    - jinja2
     - scripting
 
 test:
