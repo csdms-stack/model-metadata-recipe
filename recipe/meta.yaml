@@ -15,6 +15,7 @@ requirements:
     - python
     - packaging
     - setuptools
+    - packaging
     - pyyaml
     - six
     - jinja2
@@ -42,7 +43,7 @@ test:
     - nosetests --with-doctest model_metadata [not linux]
 
 build:
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 about:
