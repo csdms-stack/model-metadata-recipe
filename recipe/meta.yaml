@@ -1,5 +1,5 @@
 {% set name = "model_metadata" %}
-{% set version = "0.1" %}
+{% set version = "0.3.1" %}
 
 
 package:
@@ -8,21 +8,30 @@ package:
 
 source:
   git_url: https://github.com/csdms/model_metadata
+  git_tag: v{{ version }}
 
 requirements:
   build:
     - python
+    - packaging
     - setuptools
     - pyyaml
     - six
+    - jinja2
     - scripting
+    - packaging
+    - binaryornot
 
   run:
     - python
+    - packaging
     - numpy
-    - six
     - pyyaml
+    - six
+    - jinja2
     - scripting
+    - packaging
+    - binaryornot
 
 test:
   requires:
