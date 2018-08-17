@@ -1,5 +1,6 @@
 {% set name = "model_metadata" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
+{% set build = "0" %}
 
 
 package:
@@ -9,6 +10,7 @@ package:
 source:
   url: https://github.com/csdms/{{ name }}/archive/v{{ version }}.tar.gz
   fn: {{ name }}-{{ version }}.tar.gz
+  sha256: 303743c017a017ee684085db759cb61079da43d8dc9c4eff7301a8f84f981f62
 
 requirements:
   build:
@@ -44,7 +46,7 @@ test:
     - nosetests --with-doctest model_metadata [not linux]
 
 build:
-  number: 0
+  number: {{ build }}
   script: python -m pip install --no-deps --ignore-installed .
 
 about:
